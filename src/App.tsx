@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import MapComponent from './components/MapComponent.tsx';
 import LayerPanel from './components/LayerPanel.tsx';
 import SearchBar from './components/SearchBar.tsx';
