@@ -62,7 +62,12 @@ const DrawControls = ({ onFeatureAdd }: DrawControlsProps) => {
 
       const feature: Feature = {
         id: generateId(),
-        type: event.layerType === 'marker' ? 'marker' : event.layerType === 'polyline' ? 'polyline' : 'polygon',
+        type:
+          event.layerType === 'marker'
+            ? 'marker'
+            : event.layerType === 'polyline'
+              ? 'polyline'
+              : 'polygon',
         geometry: layer.toGeoJSON().geometry,
         properties: {
           color: '#0ea5e9',

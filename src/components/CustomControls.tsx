@@ -56,7 +56,7 @@ const CustomControls = () => {
   };
 
   return (
-    <div className="absolute bottom-8 right-4 z-[1000] flex flex-col space-y-2">
+    <div className="absolute bottom-8 right-4 z-1000 flex flex-col space-y-2">
       <button
         onClick={handleZoomIn}
         className="bg-white p-3 rounded-lg shadow-lg hover:bg-gray-50 transition-colors"

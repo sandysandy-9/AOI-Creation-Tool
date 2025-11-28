@@ -59,9 +59,9 @@ function App() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col overflow-hidden bg-gradient-to-br from-cyan-300 via-purple-300 to-pink-300">
+    <div className="h-screen w-screen flex flex-col overflow-hidden bg-linear-to-br from-cyan-300 via-purple-300 to-pink-300">
       {/* Header */}
-      <div className="bg-gradient-to-r from-cyan-600 via-blue-700 to-purple-700 shadow-2xl z-[999] animate-gradient">
+      <div className="bg-linear-to-r from-cyan-600 via-blue-700 to-purple-700 shadow-2xl z-999 animate-gradient">
         <div className="px-6 py-4">
           <h1 className="text-2xl font-bold text-white drop-shadow-2xl animate-fade-in">
             🗺️ AOI Creation Tool
@@ -75,7 +75,7 @@ function App() {
       <div className="flex-1 flex relative overflow-hidden">
         {/* Left Sidebar */}
         <div
-          className="bg-gradient-to-b from-cyan-200 via-blue-300 to-purple-300 backdrop-blur-md border-r-4 border-purple-600 flex flex-col z-[1000] overflow-y-auto transition-all duration-500 ease-in-out shadow-2xl"
+          className="bg-linear-to-b from-cyan-200 via-blue-300 to-purple-300 backdrop-blur-md border-r-4 border-purple-600 flex flex-col z-1000 overflow-y-auto transition-all duration-500 ease-in-out shadow-2xl"
           style={{ width: isSidebarOpen ? '150px' : '0px' }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -107,7 +107,7 @@ function App() {
         {/* Sidebar Toggle Tab */}
         {!isSidebarOpen && (
           <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm border border-l-0 rounded-r px-1 py-3 cursor-pointer z-[1000] hover:bg-white/90 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm border border-l-0 rounded-r px-1 py-3 cursor-pointer z-1000 hover:bg-white/90 transition-colors"
             onMouseEnter={handleMouseEnter}
           >
             <span className="text-[10px] text-gray-600">▶</span>

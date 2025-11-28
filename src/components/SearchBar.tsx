@@ -50,7 +50,7 @@ const SearchBar = ({ onLocationSelect }: SearchBarProps) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="🔍 Search locations..."
-          className="w-full px-2 py-1.5 pr-7 text-[10px] font-medium bg-gradient-to-r from-cyan-200 to-purple-200 rounded-lg shadow-lg border-2 border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600 transition-all duration-300 hover:shadow-xl"
+          className="w-full px-2 py-1.5 pr-7 text-[10px] font-medium bg-linear-to-r from-cyan-200 to-purple-200 rounded-lg shadow-lg border-2 border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600 transition-all duration-300 hover:shadow-xl"
         />
         <div className="absolute right-2 top-2">
           {isSearching ? (
@@ -74,13 +74,13 @@ const SearchBar = ({ onLocationSelect }: SearchBarProps) => {
       </div>
 
       {showResults && (
-        <div className="mt-2 bg-gradient-to-br from-cyan-100 via-purple-100 to-pink-100 rounded-lg shadow-2xl border-2 border-purple-400 max-h-48 overflow-y-auto animate-slide-down">
+        <div className="mt-2 bg-linear-to-br from-cyan-100 via-purple-100 to-pink-100 rounded-lg shadow-2xl border-2 border-purple-400 max-h-48 overflow-y-auto animate-slide-down">
           {results.length > 0 ? (
             results.map((result, index) => (
               <div
                 key={index}
                 onClick={() => handleResultClick(result)}
-                className="p-2 hover:bg-gradient-to-r hover:from-cyan-300 hover:via-blue-300 hover:to-purple-300 cursor-pointer border-b border-purple-300 last:border-b-0 transition-all duration-300 hover:scale-[1.02] animate-fade-in"
+                className="p-2 hover:bg-linear-to-r hover:from-cyan-300 hover:via-blue-300 hover:to-purple-300 cursor-pointer border-b border-purple-300 last:border-b-0 transition-all duration-300 hover:scale-[1.02] animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <p className="text-xs text-gray-800 font-medium">📍 {result.display_name}</p>

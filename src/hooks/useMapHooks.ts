@@ -5,7 +5,7 @@ import type { Feature } from '../types';
 
 const STORAGE_KEY = 'aoi-features';
 
-export const useLocalStorage = <T,>(key: string, initialValue: T) => {
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
@@ -37,7 +37,7 @@ export const useFeatures = () => {
   };
 
   const removeFeature = (id: string) => {
-    setFeatures(features.filter(f => f.id !== id));
+    setFeatures(features.filter((f) => f.id !== id));
   };
 
   const clearFeatures = () => {
@@ -47,7 +47,7 @@ export const useFeatures = () => {
   return { features, addFeature, removeFeature, clearFeatures };
 };
 
-export const useDebounce = <T,>(value: T, delay: number): T => {
+export const useDebounce = <T>(value: T, delay: number): T => {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {

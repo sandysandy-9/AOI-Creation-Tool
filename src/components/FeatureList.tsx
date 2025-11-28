@@ -27,7 +27,7 @@ const FeatureList = ({ features, onFeatureRemove, onClearAll }: FeatureListProps
           features.map((feature, index) => (
             <div
               key={feature.id}
-              className="p-2 bg-gradient-to-br from-cyan-200 via-blue-200 to-purple-200 rounded-lg border-2 border-blue-400 hover:border-purple-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-in"
+              className="p-2 bg-linear-to-br from-cyan-200 via-blue-200 to-purple-200 rounded-lg border-2 border-blue-400 hover:border-purple-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start justify-between">
@@ -61,13 +61,13 @@ const FeatureList = ({ features, onFeatureRemove, onClearAll }: FeatureListProps
         <div className="space-y-2 pt-3 border-t">
           <button
             onClick={handleExport}
-            className="w-full px-3 py-2 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 text-xs font-bold shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95"
+            className="w-full px-3 py-2 bg-linear-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 text-xs font-bold shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95"
           >
             💾 Export Features
           </button>
           <button
             onClick={onClearAll}
-            className="w-full px-3 py-2 bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 text-white rounded-lg hover:from-pink-600 hover:via-red-600 hover:to-orange-600 transition-all duration-300 text-xs font-bold shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95"
+            className="w-full px-3 py-2 bg-linear-to-r from-pink-500 via-red-500 to-orange-500 text-white rounded-lg hover:from-pink-600 hover:via-red-600 hover:to-orange-600 transition-all duration-300 text-xs font-bold shadow-lg hover:shadow-2xl transform hover:scale-110 active:scale-95"
           >
             🗑️ Clear All
           </button>
